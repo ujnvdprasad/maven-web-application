@@ -1,4 +1,7 @@
 node {
+    echo "The Node Name is: ${env.NODE_NAME}"
+    echo "The Job Name is: ${env.JOB_NAME}"
+    echo "The Build Number is: ${env.BUILD_NUMBER}"
     def MavenHome= tool name='Maven-3.9.6'
     stage('Checkout Code from GitHub') {
         git 'https://github.com/ujnvdprasad/maven-web-application.git'
