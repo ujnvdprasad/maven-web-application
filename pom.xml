@@ -24,8 +24,10 @@
 		<sonar.host.url>http://13.235.0.100:9000/</sonar.host.url>
 		<sonar.login>sqa_611277dfd0d5a24bedb16e133c145e659ff3aa46</sonar.login>
 		<!-- <sonar.password>passw0rd</sonar.password> -->
+		<!--
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		-->
 	</properties>
 
 	<dependencies>
