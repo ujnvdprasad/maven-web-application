@@ -1,4 +1,6 @@
 node {
+    buildName 'maven-scripted-pipeline-${BUILD_NUMBER}'
+    buildDescription 'scripted pipeline for maven project'
     echo "The Node Name is: ${env.NODE_NAME}"
     echo "The Job Name is: ${env.JOB_NAME}"
     echo "The Build Number is: ${env.BUILD_NUMBER}"
