@@ -14,7 +14,7 @@ node {
     }
     stage('Deploy Artifact') {
         sshagent(['Tomcat-Ssh-Connection']) {
-            sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@3.108.60.156:/opt/apache-tomcat-9.0.84/webapps"
+            sh "sudo scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@3.108.60.156:/opt/apache-tomcat-9.0.84/webapps"
         }
     }
 }
