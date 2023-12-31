@@ -1,0 +1,23 @@
+node {
+    def MavenHome= tool name='Maven-3.9.6'
+    stage('Cleaning WorkSpace') {
+        cleanWs()
+    }
+    stage('Checkout Code from GitHub') {
+        git 'https://github.com/ujnvdprasad/maven-web-application.git'
+    }
+    stage('Build and Package') {
+        sh "$MavenHome/bin/mvn clean package"
+    }
+    stage('SonarQube Code Analysis') {
+        sh "$MavenHome/bin/mvn sonar:sonar"
+    }
+    stage('Upload to Artifact') {
+        sh "$MavenHome/bin/mvn deploy"
+    }
+    stage('Deploy Artifact') {
+        sshagent(['Tomcat-Credentials-SSH']) {
+            sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@3.108.60.156:/opt/apache-tomcat-9.0.84/webapps"
+        }
+    }
+}
