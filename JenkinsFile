@@ -1,4 +1,4 @@
-node {
+node ('slave') {
     buildName 'maven-scripted-pipeline-${BUILD_NUMBER}'
     buildDescription 'scripted pipeline for maven project'
     echo "The Node Name is: ${env.NODE_NAME}"
