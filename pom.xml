@@ -28,7 +28,7 @@
                 <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         </properties>
-
+<!--
         <repositories>
                  <repository>
                      <url>http://3.110.41.80:8081/repository/maven-hosted-mixed/</url>
@@ -36,15 +36,9 @@
                      <name>Used To Download Dependency from Remote Repo</name>
                  </repository>
         </repositories>
-
+-->
         <dependencies>
-                <dependency>
-                        <groupId>com.mss</groupId>
-                        <artifactId>maven-web-application</artifactId>
-                        <version>1.0</version>
-                        <type>war</type>
-                </dependency>
-
+        
                 <dependency>
                         <groupId>org.json</groupId>
                         <artifactId>json</artifactId>
